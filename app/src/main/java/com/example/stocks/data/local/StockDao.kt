@@ -18,7 +18,7 @@ interface StockDao {
     @Query("""
         select *
         from listingentity
-        where LOSER(name) like '%' || LOWER(:query) || '%' or UPPER(:query) == symbol
+        where LOWER(name) like '%' || LOWER(:query) || '%' or UPPER(:query) == symbol
     """)
     suspend fun searchCompanyListing(query: String):List<ListingEntity>
 
