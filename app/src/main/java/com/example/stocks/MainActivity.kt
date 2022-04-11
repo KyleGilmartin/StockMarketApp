@@ -10,7 +10,8 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.stocks.presentation.listings.NavGraphs
+import com.example.stocks.presentation.NavGraphs
+
 
 import com.example.stocks.ui.theme.StocksTheme
 import com.ramcosta.composedestinations.DestinationsNavHost
