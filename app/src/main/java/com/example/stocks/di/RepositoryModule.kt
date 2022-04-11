@@ -1,9 +1,11 @@
 package com.example.stocks.di
 
 import com.example.stocks.data.csv.CSVParser
+import com.example.stocks.data.csv.IntradayInfoParser
 import com.example.stocks.data.csv.ListingsParser
 import com.example.stocks.data.repository.StockRepositoryImpl
 import com.example.stocks.domain.StockRepository
+import com.example.stocks.domain.model.IntradayInfo
 import com.example.stocks.domain.model.Listing
 import dagger.Binds
 import dagger.Module
@@ -20,6 +22,12 @@ abstract class RepositoryModule {
     abstract fun bindCompanyListingParser(
         ListingsParser:ListingsParser
     ): CSVParser<Listing>
+
+    @Binds
+    @Singleton
+    abstract fun bindIntradayInfoParser(
+        intradayInfoParser:IntradayInfoParser
+    ): CSVParser<IntradayInfo>
 
     @Binds
     @Singleton
